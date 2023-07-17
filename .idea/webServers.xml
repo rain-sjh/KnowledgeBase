@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b244c30f-21ae-4436-86d3-01cd42646ff2" name="家庭云" url="http://www.raind.fun">
+        <fileTransfer rootFolder="/docker/docsify" accessType="SFTP" host="www.raind.fun" port="2222" sshConfigId="4fec14cb-43ea-4f98-b301-f88d9679049b" sshConfig="raind@www.raind.fun:2222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
