@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>知识库</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+    <!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">-->
+    <!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">-->
+    <!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css">-->
+    <!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dolphin.css">-->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+</head>
+<body>
+<div id="app">加载中,请稍等...</div>
+<!--在 Github 上编辑-->
+<script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+<script>
+    window.$docsify = {
+        loadSidebar: true,
+        coverpage: true,
+        subMaxLevel: 2,
+        loadNavbar: true,
+        // 完整配置参数
+        search: {
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            // paths: [], // or 'auto'
+            placeholder: '输入要搜索的内容',
+            noData: '暂无结果',
+            // 搜索标题的最大层级, 1 - 6
+            depth: 2,
+            hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
+            // 避免搜索索引冲突
+            // 同一域下的多个网站之间
+            namespace: 'website-1',
+            // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+            // 匹配到的字符串将被用来识别索引
+            pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+        },
+        count: {
+            countable: true,
+            fontsize: '0.9em',
+            color: 'rgb(90,90,90)',
+            language: 'chinese'
+        },
+        plugins: [
+          EditOnGithubPlugin.create("https://github.com/rain-sjh/-",
+              "https://github.com/rain-sjh/-/edit/main/", 'title')
+        ]
+    }
+</script>
+<!-- Docsify -->
+<script src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.normalize"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<!--全文搜索-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<!--emoji-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+<!--图片缩放 - Zoom image-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+<!--复制到剪贴板-->
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<!--Gitalk-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<!--Pagination-->
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>-->
+<!--<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>-->
+<!--字数统计-->
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+<!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>-->
+<!--<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>-->
+<!--<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>-->
+
+<script>
+    const gitalk = new Gitalk({
+        clientID: 'c22496a750606575fc33',
+        clientSecret: '2b2fd4f2b99c0bb0dc2c960db17492f9dcf86d3a',
+        repo: '-',
+        owner: 'rain-sjh',
+        admin: ['rain-sjh'],
+        // 类似脸书的无干扰模式
+        distractionFreeMode: false
+    })
+</script>
+</body>
+</html>
